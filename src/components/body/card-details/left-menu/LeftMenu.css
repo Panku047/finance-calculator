@@ -1,0 +1,26 @@
+.navigation-item {
+    padding: 10px;  
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    cursor: pointer;
+    border: 2px solid lavenderblush;
+    width: 250px;
+
+  }
+  
+  .navigation-item:hover {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+
+  .navigation-item-clicked {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+  
+  /* Additional styling for better appearance */
+  .navigation-item:last-child {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
