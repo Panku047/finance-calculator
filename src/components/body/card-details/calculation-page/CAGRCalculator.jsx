@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import { Button } from "@mui/material";
 
@@ -25,9 +25,7 @@ const CAGRCalculator = () =>{
 
     const calculateCAGRValue = () =>{
         let value = calculateCAGR(initialValue, finalValue,years)
-        console.log("Pankaj-",value)
         setFinalCAGR(value)
-
     }
     return(
         <div className="cagr-comp">
@@ -42,7 +40,7 @@ const CAGRCalculator = () =>{
                     lableName='Final Value'  
                     onInputChange={handleFinalValueFromChild} 
                 />
-                <InputYearComponent onInputChange={handleYearFromChild} />
+                <InputYearComponent lableName="Years" onInputChange={handleYearFromChild} />
             </Box>
            </div>
             <div className="calculate-btn">
@@ -55,7 +53,7 @@ const CAGRCalculator = () =>{
             </div>
             {finalCAGR ? 
                 <div className="cagr-result">
-                    {finalCAGR} %
+                    {finalCAGR}
                 </div> : ''
             }
         </div>

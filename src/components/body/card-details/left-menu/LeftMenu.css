@@ -14,6 +14,11 @@
   }
 
   .navigation-item-clicked {
+    padding: 10px;  
+    text-align: left;
+    cursor: pointer;
+    border: 2px solid lavenderblush;
+    width: 250px;
     background-color: #e0e0e0;
     font-weight: bold;
   }

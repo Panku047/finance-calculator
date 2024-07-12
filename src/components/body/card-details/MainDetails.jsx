@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,8 @@ const MainDetails = ({clicked}) =>{
     const containerStyle = {
         display: 'flex',
         // height: '100vh',
-        marginLeft: '1%'
+        marginLeft: '1%',
+        marginTop: '1%'
       };
       const leftSideStyle = {
         width: '24%',

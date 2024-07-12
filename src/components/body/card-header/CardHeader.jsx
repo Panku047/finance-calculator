@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Card from "./Card";
 import { CardData } from "../../data/CardData";
 
 const CardHeader = () =>{
     return(
-        <div>
-            <div className="card-container">
+        <div className="card-container">
                 {CardData.map((value, index) =>{
                     return(
                         <Card key={index}
@@ -13,10 +12,10 @@ const CardHeader = () =>{
                             longTitle={value.longTitle}
                             title={value.title}
                             details={value.details}
+                            page={value.page}
                         />
                     );
                 })}
-            </div>
         </div>
     );
 }

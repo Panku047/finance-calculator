@@ -31,6 +31,10 @@ const routes = [
   {
     path: '/ppf',
     component: <MainDetails clicked='PPF' />
+  },
+  {
+    path: '/rule-of-72',
+    component: <MainDetails clicked='RULE72' />
   }
 ];
 

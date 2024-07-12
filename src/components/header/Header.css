@@ -1,6 +1,29 @@
+.head{
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid lavenderblush;
+    justify-content: space-between;
+    background-color: #21618C ;
+}
+
 .header-h2{
-    text-align: center;
-    margin-top: 0px;
-    padding-top: 12px;
     color: #333;
+    margin-left: 5%;
+    color: white;
+}
+
+.header-h2-name{
+    color: #333;
+    margin-right: 5%;
+    color: gray;
+    color: whitesmoke;
+}
+
+.head-log{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 6px;
+    left: 5px;
+    border-radius: 30%;
 }

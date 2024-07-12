@@ -3,6 +3,7 @@
     margin-top: -20px;
 }
 
+
 .calculate-btn{
     margin-top: 35px;
 }
@@ -15,6 +16,19 @@
     width: 20%;
     position: relative;
     left: 37%;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sip-result{
+    text-align: center;
+    margin-top: 2%;
+    background: aliceblue;
+    padding: 30px;
+    width: 40%;
+    position: relative;
+    left: 27%;
     border-radius: 5px;
     font-size: 20px;
     font-weight: bold;

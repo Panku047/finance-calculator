@@ -2,6 +2,10 @@ import React, {useEffect, useState} from "react";
 
 import CAGRCalculator from "./CAGRCalculator";
 import CAGRPercentageCalculator from "./CAGRPercentageCalculator";
+import SIPCalculator from "./SIPCalculator";
+import PPFCalculator from "./PPFCalculator"
+import MFCalculator from "./MFCalculator"
+import LumpsumCalculator from "./LumpsumCalculator"
 
 const LoadCalculationPage = ({cardClicked}) =>{
     const[calcScreen, setCalcScreen] = useState()
@@ -14,13 +18,13 @@ const LoadCalculationPage = ({cardClicked}) =>{
         case 'CAGRP':
           return <CAGRPercentageCalculator />;
         case 'PPF':
-          return <div>Our Services</div>;
+          return <PPFCalculator />;
         case 'LUMPSUM':
-          return <div>Contact Us</div>;
+          return <LumpsumCalculator />;
         case 'SIP':
-          return <div>Read our Blog</div>;
-        case 'LUMPSUM':
-            return <div>Contact Us</div>;
+          return <SIPCalculator />;
+        case 'MF':
+            return <MFCalculator />;
         default:
           return <div>Default Page</div>;
     }

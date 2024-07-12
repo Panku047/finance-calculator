@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import './Card.css';
 import { Link } from 'react-router-dom';
 
-const Card = ({path, longTitle, title, details }) => {
+const Card = ({path, title, page, details }) => {
+  const clickedOnCard = () =>{
+    sessionStorage.setItem("cardActive", page)
+  }
   return (
-      <div className="card">
+      <div className="card"
+        onClick={clickedOnCard}
+      >
         <Link style={{textDecoration: 'none'}} to={{ pathname: path}}>
         <div className="card-header">
           <h4>{title}</h4>
