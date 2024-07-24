@@ -1,20 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 import TextField from '@mui/material/TextField';
 
-const InputYearComponent = ({lableName, onInputChange}) =>{
-    const [years, setYears] = useState('');
+const InputYearComponent = ({labelName, onInputChange, currentValue}) =>{
     const handleYearChange = (event) => {
         const { value } = event.target;
         if (/^\d*$/.test(value) && Number(value) <= 100) {
-          setYears(value);
           onInputChange(value)
         }
       };
     return(
         <TextField
-            label={lableName}
+            label={labelName}
             variant="outlined"
-            value={years}
+            value={currentValue}
             onChange={handleYearChange}
       />
     );

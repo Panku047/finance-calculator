@@ -24,7 +24,7 @@
 .sip-result{
     text-align: center;
     margin-top: 2%;
-    background: aliceblue;
+    background-color: aliceblue;
     padding: 30px;
     width: 40%;
     position: relative;
@@ -32,4 +32,33 @@
     border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
+    max-width: 400px;
+    /* margin: 0 auto; */
+    /* padding: 20px; */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sip-result p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.use-calendar-btn{
+    text-align: end;
+    padding-right: 18px;
+    padding-top: 5px;
+}
+
+.des-text-message{
+    font-size: 12px;
+    color: midnightblue;
 }

@@ -14,6 +14,6 @@ export function calculateSIP(sipAmount, annualRate, years) {
     //calculate only return
     let totalReturn = accumulatedAmount - totalInvestmentAmt
 
-    return [totalInvestmentAmt,totalReturn.toFixed(2), accumulatedAmount.toFixed(2)];
+    return [totalInvestmentAmt,totalReturn.toFixed(0), accumulatedAmount.toFixed(1)];
 }
 

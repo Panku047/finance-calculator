@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Box from '@mui/material/Box';
 import { Button } from "@mui/material";
 
@@ -12,6 +12,7 @@ const CAGRCalculator = () =>{
     const[finalValue, setFinalValue] = useState('');
     const[years, setYears] = useState('')
     const[finalCAGR, setFinalCAGR] = useState('');
+    const[disableCalculateBtn, setDisableCalculateBtn] = useState(true)
 
     const handleInitialValueFromChild = (value) => {
         setInitialValue(value); 
@@ -23,6 +24,14 @@ const CAGRCalculator = () =>{
         setYears(value); 
     };
 
+    useEffect(() =>{
+        if(initialValue && finalValue && years){
+            setDisableCalculateBtn(false)
+        }
+        else{
+            setDisableCalculateBtn(true)
+        }
+    },[initialValue, finalValue, years])
     const calculateCAGRValue = () =>{
         let value = calculateCAGR(initialValue, finalValue,years)
         setFinalCAGR(value)
@@ -33,20 +42,21 @@ const CAGRCalculator = () =>{
            <div>
             <Box display="flex" flexDirection="row" gap={4} width="80%" margin="auto" mt={5}>
                 <InputComponent 
-                    lableName='Initial Value' 
+                    labelName='Initial Value' 
                     onInputChange={handleInitialValueFromChild}
                 />
                 <InputComponent 
-                    lableName='Final Value'  
+                    labelName='Final Value'  
                     onInputChange={handleFinalValueFromChild} 
                 />
-                <InputYearComponent lableName="Years" onInputChange={handleYearFromChild} />
+                <InputYearComponent labelName="Years" onInputChange={handleYearFromChild} />
             </Box>
            </div>
             <div className="calculate-btn">
                 <Button 
                     variant="contained" 
                     onClick={calculateCAGRValue}
+                    disabled={disableCalculateBtn}
                 >
                     Calculate
                 </Button>

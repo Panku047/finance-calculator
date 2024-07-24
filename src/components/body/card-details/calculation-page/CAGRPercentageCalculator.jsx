@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Box from '@mui/material/Box';
 import { Button } from "@mui/material";
 
@@ -11,6 +11,7 @@ const CAGRPercentageCalculator = () =>{
     const[returnPercentage, setReturnPercentage] = useState('')
     const[years, setYears] = useState('')
     const[finalCAGR, setFinalCAGR] = useState('')
+    const[disableCalculateBtn, setDisableCalculateBtn] = useState(true)
     const handlePercentageFromChild = (value) => {
         setReturnPercentage(value); 
     };
@@ -21,22 +22,31 @@ const CAGRPercentageCalculator = () =>{
         let value = calculateCAGRPercentage(returnPercentage,years)
         setFinalCAGR(value)
     }
+    useEffect(() =>{
+        if(returnPercentage && years){
+            setDisableCalculateBtn(false)
+        }
+        else{
+            setDisableCalculateBtn(true)
+        }
+    },[returnPercentage, years])
     return(
         <div className="cagr-comp">
            <h3>CAGR Calculator from return percentage</h3>
            <div>
             <Box display="flex" flexDirection="row" gap={4} width="40%" margin="auto" mt={5}>
                 <InputPercantageComponent 
-                    lableName='Return in %' 
+                    labelName='Return in %' 
                     onInputChange={handlePercentageFromChild}
                 />
-                <InputYearComponent lableName="Years" onInputChange={handleYearFromChild} />
+                <InputYearComponent labelName="Years" onInputChange={handleYearFromChild} />
             </Box>
            </div>
             <div className="calculate-btn">
                 <Button 
                     variant="contained" 
                     onClick={calculateCAGRValue}
+                    disabled={disableCalculateBtn}
                 >
                     Calculate
                 </Button>

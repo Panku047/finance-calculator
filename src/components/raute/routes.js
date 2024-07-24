@@ -1,5 +1,6 @@
 import Layout from '../layout/Layout';
 import MainDetails from '../body/card-details/MainDetails';
+import SamplePage from '../body/stock-market/SamplePage';
 
 
 const routes = [
@@ -25,16 +26,24 @@ const routes = [
     component: <MainDetails clicked='LUMPSUM' />
   },
   {
-    path: '/mutual-fund',
+    path: '/ci-calculator',
     component: <MainDetails clicked='MF' />
   },
   {
-    path: '/ppf',
-    component: <MainDetails clicked='PPF' />
+    path: '/absolute',
+    component: <MainDetails clicked='ABSCAL' />
   },
   {
     path: '/rule-of-72',
     component: <MainDetails clicked='RULE72' />
+  },
+  {
+    path: '/stock-market',
+    component: <SamplePage clicked='SM' />
+  },
+  {
+    path: '/mutual-fund',
+    component: <SamplePage clicked='SM' />
   }
 ];
 

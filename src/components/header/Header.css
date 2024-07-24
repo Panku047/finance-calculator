@@ -4,6 +4,9 @@
     border-bottom: 2px solid lavenderblush;
     justify-content: space-between;
     background-color: #21618C ;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
 }
 
 .header-h2{

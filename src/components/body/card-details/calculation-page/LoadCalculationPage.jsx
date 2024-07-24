@@ -3,9 +3,10 @@ import React, {useEffect, useState} from "react";
 import CAGRCalculator from "./CAGRCalculator";
 import CAGRPercentageCalculator from "./CAGRPercentageCalculator";
 import SIPCalculator from "./SIPCalculator";
-import PPFCalculator from "./PPFCalculator"
-import MFCalculator from "./MFCalculator"
+import AbsoluteCalculator from "./AbsoluteCalculator"
+import CICalculator from "./CICalculator"
 import LumpsumCalculator from "./LumpsumCalculator"
+import RuleOf72 from "./RuleOf72";
 
 const LoadCalculationPage = ({cardClicked}) =>{
     const[calcScreen, setCalcScreen] = useState()
@@ -17,14 +18,16 @@ const LoadCalculationPage = ({cardClicked}) =>{
           return <CAGRCalculator />;
         case 'CAGRP':
           return <CAGRPercentageCalculator />;
-        case 'PPF':
-          return <PPFCalculator />;
+        case 'ABSCAL':
+          return <AbsoluteCalculator />;
         case 'LUMPSUM':
           return <LumpsumCalculator />;
         case 'SIP':
           return <SIPCalculator />;
         case 'MF':
-            return <MFCalculator />;
+            return <CICalculator />;
+        case 'RULE72':
+          return <RuleOf72 />;
         default:
           return <div>Default Page</div>;
     }

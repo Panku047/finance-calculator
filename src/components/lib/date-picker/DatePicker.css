@@ -1,0 +1,32 @@
+/* src/DatePicker.css */
+
+.date-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 300px;
+  }
+  
+  .date-picker-input {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .date-picker-input::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+  }
+
+  .date-picker-label{
+    margin-top: -7px;
+  }
+  
+  .selected-date {
+    font-size: 16px;
+    color: #333;
+  }
+  

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import TextField from '@mui/material/TextField';
 
-const InputPercantageComponent = ({lableName, onInputChange}) =>{
+const InputPercantageComponent = ({labelName, onInputChange}) =>{
     const [initialValue, setInitialValue] = useState('');
     const handleNumberChange = (setter) => (event) => {
         const { value } = event.target;
@@ -12,7 +12,7 @@ const InputPercantageComponent = ({lableName, onInputChange}) =>{
     };
     return(
         <TextField
-            label={lableName}
+            label={labelName}
             variant="outlined"
             value={initialValue}
             onChange={handleNumberChange(setInitialValue)}
